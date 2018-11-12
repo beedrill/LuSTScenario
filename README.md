@@ -1,3 +1,6 @@
+## This is a project working on LuST Scenario to get car flow from a specific intersection and then generate corresponding route:
+run carFlow.py, parseResult.py, makeRoute.py sequentially to generate route. works for SUMO 0.26
+
 ## Luxembourg SUMO Traffic (LuST) Scenario
 
 Contacts: Lara CODECA [codeca@gmail.com], VehicularLab [vehicular-lab@uni.lu]
