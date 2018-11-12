@@ -1,27 +1,11 @@
 ## This is a project working on LuST Scenario to get car flow from a specific intersection and then generate corresponding route:
-run carFlow.py, parseResult.py, makeRoute.py sequentially to generate route. works for SUMO 0.26
+First configure the files in deploymentMap the way you want
+then run carFlow.py, parseResult.py, makeRoute.py (you have to change the parameter to obey the intersection) sequentially to generate route. works for SUMO 0.26
 
 ## Luxembourg SUMO Traffic (LuST) Scenario
+The orginal LuST can be found here:
+https://github.com/lcodeca/LuSTScenario
 
-Contacts: Lara CODECA [codeca@gmail.com], VehicularLab [vehicular-lab@uni.lu]
-
-This project is licensed under the terms of the MIT license.
-
-#### Publications:
-
-L. Codeca, R. Frank, S. Faye and T. Engel,
-*"Luxembourg SUMO Traffic (LuST) Scenario: Traffic Demand Evaluation"*
-in IEEE Intelligent Transportation Systems Magazine, vol. 9, no. 2, pp. 52-63, Summer 2017.  
-DOI: 10.1109/MITS.2017.2666585  
-URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7906642&isnumber=7904753
-
-[Get BibTeX](https://github.com/lcodeca/LuSTScenario/blob/master/BibTeX.bib)
-
-Best paper award of VNC 2015 to Lara CODECA, Raphael FRANK, Thomas ENGEL,
-*Luxembourg SUMO Traffic (LuST) Scenario: 24 Hours of Mobility for Vehicular Networking Research*
-in Proceedings of the 7th IEEE Vehicular Networking Conference (VNC15), December 2015.
-
-#### How To:
 LuST Scenario can be lunched directly with four configuration files.
 * Mobility: shortest path with rerouting.
   * `sumo -c dua.static.sumocfg` with static traffic lights.
