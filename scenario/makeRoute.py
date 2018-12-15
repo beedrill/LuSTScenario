@@ -4,9 +4,11 @@ with open('carflow.pkl','rb') as f:
     carflow = pickle.load(f)
 #print(carflow)
 #west, north, east, south
-from_edge = ['--31272#7', '-30892#16', '-31272#6', '--30892#17']
+from_edge = ['-31496#9', '-32776#8', '--31496#10', '--32776#9']
+to_edge = ['--31496#9', '--32776#8', '-31496#10', '-32776#9']
+#from_edge = ['--31272#7', '-30892#16', '-31272#6', '--30892#17']
 from_edge_new = ['west_in','north_in','east_in', 'south_in']
-to_edge = ['-31272#7', '--30892#16', '--31272#6', '-30892#17']
+#to_edge = ['-31272#7', '--30892#16', '--31272#6', '-30892#17']
 to_edge_new = ['west_out','north_out','east_out', 'south_out']
 vtype = ["passenger1","passenger2a","passenger2b","passenger3","passenger4","passenger5", "bus"]
 def generateRoute(name, hour):
@@ -124,6 +126,6 @@ def generateRoute(name, hour):
     tree.write("{}.rou.xml".format(name))
 
 if __name__=='__main__':
-    folder = 'whole-day-training-flow-LuST-12408'
+    folder = 'whole-day-training-flow-LuST-22640'
     for hour in range(0,24):
         generateRoute(folder+'/traffic-{}'.format(hour), hour)

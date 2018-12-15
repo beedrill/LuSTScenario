@@ -6,13 +6,17 @@ else:
  sys.exit("please declare environment variable 'SUMO_HOME'")
 
 sumoBinary = "sumo-gui"
-sumoCmd = [sumoBinary, "-c", "due.static.sumocfg"]
+#sumoCmd = [sumoBinary, "-c", "dua.static.sumocfg"]
 
 import traci
 
 #west north east south
-from_edge = ['--31272#7', '-30892#16', '-31272#6', '--30892#17']
-to_edge = ['-31272#7', '--30892#16', '--31272#6', '-30892#17']
+#from_edge = ['--31272#7', '-30892#16', '-31272#6', '--30892#17']
+#to_edge = ['-31272#7', '--30892#16', '--31272#6', '-30892#17']
+##for intersection 22640
+
+from_edge = ['-31496#9', '-32776#8', '--31496#10', '--32776#9']
+to_edge = ['--31496#9', '--32776#8', '-31496#10', '-32776#9']
 v_list = {}
 v_id_list =[]
 
@@ -24,7 +28,7 @@ class Vehicle():
         self.time = time
 
 
-sumoProcess = subprocess.Popen("%s %s" % (sumoBinary, "due.static.sumocfg"), shell=True, stdout=sys.stdout)
+sumoProcess = subprocess.Popen("%s %s" % (sumoBinary, "dua.static.sumocfg"), shell=True, stdout=sys.stdout)
 traci.init(port=8813, numRetries=10, host='localhost', label='default')
 
 
